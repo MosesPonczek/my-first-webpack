@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: "Proxima Nova", sans-serif;
+    padding: 300px 0;
+}
+
+h1 {
+    font-size: 72px;
+    text-align: center;
+}
+
+.element {
+    background-color: dodgerblue;
+    padding: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    max-width: 580px;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-width: 100%;
+}
