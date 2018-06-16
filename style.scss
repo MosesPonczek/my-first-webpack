@@ -1,32 +1,91 @@
-$color1: #1505a1;
-$color2: #047a9e;
+$color1: #0040d1;
+$color2: #001640;
 
-body {
-    margin: 0;
-    font-family: "Arial", sans-serif;
-    padding: 300px 0;
-    h1 {
-        font-size: 72px;
-        text-align: center;
-        color: $color1;
+* {
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        box-sizing: border-box;
     }
 }
 
-.element {
+.mylogo {
     display: flex;
-    background-color:$color2;
-    padding: 30px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    font-style: italic;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    max-width: 580px;
-    margin: 30px auto;
-    border-radius: 15px;
-    text-align: center;
-    transition: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    &:hover {
-        transform: scale(1.5);
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding: 50px;
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 30%;
+        height: 0;
+        background-color: $color1;
+        animation: show-elem-height 0.7s 1.3s ease-out forwards, show-elem-width 0.3s 2.5s ease-in forwards;
+        @media screen and (max-width: 640px) {
+            width: 50%;
+        }
+    }
+}
+
+.colorvision-logo {
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    & .a {
+        stroke-width: 2;
+        stroke: $color1;
+        fill: $color2;
+    }
+    & .b {
+        stroke-width: 2;
+        stroke: $color1;
+        fill: $color1;
+    }
+    & path {
+        stroke-dasharray: 1100;
+        stroke-dashoffset: 1100;
+        animation: dash 1s linear forwards, fill-in 0.5s 1s linear forwards;
+        fill-opacity: 0;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-in {
+    to {
+        fill-opacity: 1;
+    }
+}
+
+@keyframes fly-out {
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes show-elem-height {
+    to {
+        height: 100vh;
+    }
+}
+
+@keyframes show-elem-width {
+    to {
+        width: 100vw;
     }
 }

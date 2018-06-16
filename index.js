@@ -1,21 +1,12 @@
-
+import 'reset-css';
 import './style.scss';
 
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
+// import $ from 'jquery';
+// window.jQuery = $;
+// window.$ = $;
 
-var element = document.createElement('div');
-element.innerHTML = 'Siemanko!';
-element.classList.add('element');
-document.body.appendChild(element);
+// jQuery(document).ready(function () {
 
-function animationElement() {
-    $('.element').on('click', function(){
-        $(this).fadeToggle();
-    });
-}
+//     const logo = $('.colorvision-logo path');
 
-jQuery(document).ready(function(){
-    animationElement();
-});
+// });
