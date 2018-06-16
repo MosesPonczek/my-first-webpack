@@ -1,7 +1,7 @@
 import 'reset-css';
 import './style.scss';
 
-console.log('Siemanko! www.colorvision.pl!')
+console.log('Siemanko! www.colorvision.pl!');
 // import $ from 'jquery';
 // window.jQuery = $;
 // window.$ = $;

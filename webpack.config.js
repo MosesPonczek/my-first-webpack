@@ -12,15 +12,16 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [{
+    rules: [
+      {
       test: /\.s?css$/,
       use: [
-        'style-loader',
+        { loader: 'style-loader' },
         { loader: 'css-loader', options: { minimize: true } },
-        'sass-loader',
-        'postcss-loader'
+        { loader: 'sass-loader' },
+        { loader: 'postcss-loader' }
       ]
-    }
+    },
   ]
   },
   plugins: [
